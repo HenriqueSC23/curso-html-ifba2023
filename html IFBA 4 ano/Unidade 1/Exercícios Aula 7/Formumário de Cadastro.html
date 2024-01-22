@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+</head>
+<body>
+    <form method="post" action="Formulário">
+    <h1>Formulário de Cadastro</h1><br>
+    Nome:
+    <br><input type="text" name="nome"><br>
+    <br>Endereço:
+    <br><input type="text" name="endereco"><br>
+    <br>Telefone Profissional:
+    <br><input type="text" name="profissional"><br>
+    <br>Telefone de Emergêcia:
+    <br><input type="text" name="emergencia"><br>
+    <br>Área de Atuação: <br>
+    <input type="radio" name="atuacao" value="eco">Ciências Exatas<br>
+    <input type="radio" name="atuacao" value="eco">Ciências Humanas<br>
+    <input type="radio" name="atuacao" value="eco">Ciências da Natureza<br><br>
+    <input type="checkbox" name="exatas">Gostaria de receber notícias das áreas de ciências exatas <br>
+    <input type="checkbox" name="humanas">Gostaria de receber notícias das áreas de ciências humanas <br>
+    <input type="checkbox" name="natureza">Gostaria de receber notícias das áreas de ciências da natureza <br>
+    <br>Estuda atualmente em qual ano?<br>
+    <select name="ano" multiple size="4">
+        <option>Primeiro ano</option>
+        <option>Segundo ano</option>
+        <option>Terceiro ano</option>
+        <option>Quarto ano</option>
+    </select><br><br>
+    <button type="submit">Enviar</button><button type="reset">Limpar</button>
+    </form>
+</body>
+</html>

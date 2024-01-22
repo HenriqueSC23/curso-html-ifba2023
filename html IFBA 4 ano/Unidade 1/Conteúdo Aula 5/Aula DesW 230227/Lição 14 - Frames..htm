@@ -1,0 +1,631 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0070)file:///C:/Pim/Web%201/Download/Li%C3%A7%C3%A3o%2014%20-%20Frames..htm -->
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Lição 14 - Frames.</TITLE>
+<META description="" content="Html F&aacute;cil. Este &eacute; um tutorial do HTML. Embora dirigido a principiantes e &agrave; aqueles que desejam criar e manter seu site na Internet, cont&eacute;m informa&ccedil;&otilde;es &uacute;teis at&eacute; para webdesignes adiantados.">
+<META http-equiv="Autor" content="Cyro de Camargo Penteado ">
+<META name="quot;copyright&quot;" content="Cyro Penteado">
+<META http-equiv="Email" content="cyrocp@uol.com.br">
+<META http-equiv="city" content="S&atilde;o Paulo">
+<META http-equiv="State" content="SP">
+<META http-equiv="Country" content="Brasil">
+
+<META name="GENERATOR" content="1st page - 2000 - Eversoft">
+</HEAD><BODY bgcolor="#FFFFFF">
+<BASEFONT face="ARIAL" color="#000000" size="2">
+<H1 align="CENTER">Lição 14 - Frames.</H1>
+<HR size="5" noshade="" width="75%" color="#0000FF">
+<DIV align="center"><CENTER>
+<FORM>
+            <P><INPUT type="button" value="  &lt;- Voltar " onclick="window.location.href=&#39;Licao_13.html&#39;">
+			<INPUT type="button" value="Home" onclick="window.location.href=&#39;index.html&#39;">
+			<INPUT type="button" value="Pr&oacute;xima -&gt;" onclick="window.location.href=&#39;Licao_15.html&#39;"></P>
+        </FORM>
+</CENTER></DIV><HR size="5" noshade="" width="75%" color="#0000FF">
+
+<BASEFONT size="2">
+<H2>O que são e para que servem.</H2>
+<P><EM>FRAME</EM> permite criarmos uma moldura na tela,na qual podemos inserir arquivos como páginas em HTML e figuras.</P>
+<P>É portanto uma maneira de formatar a tela e racionalizar o nosso trabalho.</P>
+<P>Seja  por exemplo a tela. </P>
+<TABLE border="5" width="80%" align="CENTER">
+<CAPTION align="CENTER">Tela em frame</CAPTION>
+    <TBODY><TR>
+        <TH colspan="2" width="100%">Aqui colocaremos uma página com o cabeçalho.</TH>
+    </TR>
+    <TR>
+        <TD width="20%">Aquí colocaremos a página do so Menú</TD>
+        <TD width="50%">Aquí serão exibidas as páginas de nosso site, constante do menú à esquerda..</TD>
+    </TR>
+    <TR>
+        <TD align="center" colspan="2" width="100%">Aqui colocaremas uma página com o rodapé.</TD>
+    </TR>
+</TBODY></TABLE>
+<P>Para manter  uma uniformidade em nosso site utilizando Tabelas precisariamos criar todas as páginas repetindo o Cabeçalho, o Menú e o Rodapé.</P>
+<P>Entretanto podemos obter o mesmo resultado com  o uso de FRAMES. Para isto criaremos uma página principal com a moldura que receberá as demais. A seguir criaremos uma página para o cabeçalho, uma para o redapé e uma para o menú que ficarão expostas permanentemente. Finalmente criaremos as páginas,uma para cada itém de nosso <EM>MENÚ</EM> que serão colocadas na célula à esquerda da segunda linha.</P><P>
+</P><P>Suponhamos que vamos acrescentar um novo item em nosso Menu. Bastará alterar a página do Menú e criar a nova página. Apenas com tabelas, precisariamos alterar o Menu em TODAS as páginas.</P>
+<P>Alémdisto poderemos vir a ter um carregamento mais rápido. Se houver figuras nessas três áreas fixas, elas não terão de ser carregadas novamente, o que aumenta a velocidade.</P>
+
+<H2 align="left">&lt;FRAMESET ROWS="" COLS=""&gt;...&lt;/FRAMESET&gt;</H2>
+<P> Este par de comandos serve para subdividir nossa tela em linhas ou em colunas.</P>
+<P align="left">Este par de comandos é utilizado em lugar do par &lt;BODY&gt;&lt;/BODY&gt;. Na realidade essa página será uma moldura em que você poderá inserir outras. </P>
+
+<TABLE align="CENTER" border="5" cellspacing="2" cellpadding="1" width="80%" bordercolorlight="#00FF00" bordercolordark="#004000">
+<CAPTION align="CENTER">ATRIBUTOS DE FRAMESET</CAPTION>
+<CAPTION align="CENTER">Estes atributos são mutuamente exclusivos, ou seja use um ou outro.</CAPTION>
+<TBODY><TR>
+       <TD>ATRIBUTO</TD>
+       <TD>CONTEUDO</TD>
+       <TD>OBS.</TD>
+</TR>
+<TR>
+       <TD>ROWS</TD>
+       <TD>PORCENTAGEM DE CADA LINHA SEPARADAS POR VIRGULA.</TD>
+       <TD>VALORES RELATIVOS.</TD>
+</TR>
+<TR>
+       <TD>COLS </TD>
+       <TD>PORCENTAGEM DE CADA COLUNA SEPARADAS POR VIRGULA.</TD>
+       <TD>VALORES RELATIVOS</TD>
+</TR>
+</TBODY></TABLE>
+<H2 align="left">&lt;FRAME&gt;...&lt;/FRAME&gt;</H2>
+<P align="left">Este par de comandos vai agora definir cada uma das janelas nas áreas que criamos com &lt;FRAMESET&gt;&lt;/FRAMESET&gt;. </P>
+
+<P align="left">Ele pode receber os seguintes atributos:</P>
+&lt;FRAME NAME="" SRC="" FRAMEBORDER="" MARGINWIDTH="" MARGINHEIGHT="" NORESIZE SCROLLING="YES|NO|AUTO"&gt;
+<TABLE align="CENTER" border="5" cellspacing="2" cellpadding="1" width="80%" bordercolorlight="#00FF00" bordercolordark="#004000">
+<CAPTION align="CENTER">ATRIBUTOS DE FRAME</CAPTION>
+<TBODY><TR>
+       <TD>Atributo</TD>
+       <TD>Contêm</TD>
+       <TD>Obs.</TD>
+</TR>
+<TR>
+       <TD>NAME=""
+</TD>
+       <TD>Texto</TD>
+       <TD>Nome do frame</TD>
+</TR>
+<TR>
+       <TD> SRC="" </TD>
+       <TD>&amp;NBSP;</TD>
+       <TD>&amp;NBSP;</TD>
+</TR>
+<TR>
+       <TD>FRAMEBORDER=""</TD>
+       <TD>Número</TD>
+       <TD>largura da borda</TD>
+</TR>
+<TR>
+       <TD>MARGINWIDTH=""</TD>
+       <TD>Número</TD>
+       <TD>Largura da margem</TD>
+</TR>
+<TR>
+       <TD>MARGINHEIGHT="" </TD>
+       <TD>Número</TD>
+       <TD>Altura da magem</TD>
+</TR>
+<TR>
+       <TD>NORESIZE</TD>
+       <TD>&amp;NBSP;</TD>
+       <TD>Não permitir ao usuário alterar o seu tamanho.</TD>
+</TR>
+<TR>
+       <TD>SCROLLING="</TD>
+       <TD>YES|NO|AUTO</TD>
+       <TD>Permitir rodar vertical ou horizontal o conteúdo da página com os cursores.</TD>
+</TR>
+</TBODY></TABLE>
+
+<P align="left">Muito bem. Para que você entenda mais rapidamente nada como  um exemplo. Para isto vamos ter de usar algumas páginas para coloca-las em nosso <U><I>FRAME</I></U>.</P>
+
+<P align="left">Use o seu <EM>1st Page</EM> (ou outro editor de HTML que você queira) e crie os seguintes arquivos.</P>
+
+<HR>
+<!-- Inicio da Janela //-->    
+<TABLE border="5" cellpadding="10" cellspacing="0" color="gray" bgcolor="silver" width="608" align="center">
+<CAPTION align="" valign="" title="">Frame 1</CAPTION>
+  <TBODY><TR>
+    <TD width="100%" align="center">Clique <A href="javascript:selectCode(0)">aquí</A> para selecionar o código na janela abaixo.<BR>
+      Use Ctrl+C para copiar para o seu "clipboard".</TD>
+  </TR>
+  <TR>
+	<TD width="100%" align="center">
+		<FORM method="POST" name="F">
+		<TEXTAREA rows="12" cols="61" name="TA" style="background-color: white; color: black; border: 1 solid #6E6650"><!-- inicio Cole este texto em uma página em branco.-->
+<html><br>
+<head><ul>
+	<title>Utilizando Frames.</title></ul>
+</head><br>
+<body><ul>
+	<h1 align="center">Esta é a Primeira Página.</h1></ul>
+</body><br>
+</html>
+<!-- Fim -->
+		</TEXTAREA>
+	</FORM>
+	</TD>
+  </TR>
+</TBODY></TABLE>
+<!-- Fim da janela -->
+<P align="left">Salve-o como <STRONG>frame_1.html</STRONG> em exercicios</P>
+<HR>
+<!-- Inicio da Janela //-->    
+<TABLE border="5" cellpadding="10" cellspacing="0" color="gray" bgcolor="silver" width="608" align="center">
+<CAPTION align="" valign="" title="">Frame 2</CAPTION>
+  <TBODY><TR>
+    <TD width="100%" align="center">Clique <A href="javascript:selectCode(0)">aquí</A> para selecionar o código na janela abaixo.<BR>
+      Use Ctrl+C para copiar para o seu "clipboard".</TD>
+  </TR>
+  <TR>
+	<TD width="100%" align="center">
+		<FORM method="POST" name="F">
+		<TEXTAREA rows="10" cols="61" name="TA" style="background-color: white; color: black; border: 1 solid #6E6650"><!-- inicio Cole este texto no corpo de sua pagina.-->
+<html><br>
+<head><ul>
+	<title>Utilizando Frames.</title></ul>
+</head><br>
+<body><ul>
+<h1 align="center">Esta é a Segunda Página.</h1></ul>
+</body><br>
+</html>
+<!-- Fim -->
+		</TEXTAREA>
+	</FORM>
+	</TD>
+  </TR>
+</TBODY></TABLE>
+<!-- Fim da janela -->
+<P align="left">Salve-o como <STRONG>frame_2.html</STRONG></P>
+<HR>
+<!-- Inicio da Janela //-->    
+<TABLE border="5" cellpadding="10" cellspacing="0" color="gray" bgcolor="silver" width="608" align="center">
+<CAPTION align="" valign="" title="">Frame 3</CAPTION>
+  <TBODY><TR>
+    <TD width="100%" align="center">Clique <A href="javascript:selectCode(0)">aquí</A> para selecionar o código na janela abaixo.<BR>
+      Use Ctrl+C para copiar para o seu "clipboard".</TD>
+  </TR>
+  <TR>
+	<TD width="100%" align="center">
+		<FORM method="POST" name="F">
+		<TEXTAREA rows="10" cols="61" name="TA" style="background-color: white; color: black; border: 1 solid #6E6650"><!-- inicio Cole este texto no corpo de sua pagina.-->
+<html><br>
+<head><ul>
+	<title>Utilizando Frames.</title></ul>
+</head><br>
+<body><ul>
+	<h1 align="center">Esta é a Terceira Página.</h1></ul>
+</body><br>
+</html>
+<!-- Fim -->
+		</TEXTAREA>
+	</FORM>
+	</TD>
+  </TR>
+</TBODY></TABLE>
+<!-- Fim da janela -->
+<P align="left">Salve-o como <STRONG>frame_3.html</STRONG></P>
+
+<HR>
+<!-- Inicio da Janela //-->    
+<TABLE border="5" cellpadding="10" cellspacing="0" color="gray" bgcolor="silver" width="608" align="center">
+<CAPTION align="" valign="" title="">Frame 4</CAPTION>
+  <TBODY><TR>
+    <TD width="100%" align="center">Clique <A href="javascript:selectCode(0)">aquí</A> para selecionar o código na janela abaixo.<BR>
+      Use Ctrl+C para copiar para o seu "clipboard".</TD>
+  </TR>
+  <TR>
+	<TD width="100%" align="center">
+		<FORM method="POST" name="F">
+		<TEXTAREA rows="10" cols="61" name="TA" style="background-color: white; color: black; border: 1 solid #6E6650"><!-- inicio Cole este texto no corpo de sua pagina.-->
+<html><br>
+<head><ul>
+	<title>Utilizando Frames.</title></ul>
+</head><br>
+<body><ul>
+<h1 align="center">Esta é a Quarta Página.</h1></ul>
+</body><br>
+</html>
+<!-- Fim -->
+		</TEXTAREA>
+	</FORM>
+	</TD>
+  </TR>
+</TBODY></TABLE>
+<!-- Fim da janela -->
+<P align="left">Salve-o como <STRONG>frame_4.html</STRONG></P>
+<HR>
+
+<!-- Inicio da Janela //-->    
+<TABLE border="5" cellpadding="10" cellspacing="0" color="gray" bgcolor="silver" width="608" align="center">
+<CAPTION align="" valign="" title="">Frame 5</CAPTION>
+  <TBODY><TR>
+    <TD width="100%" align="center">Clique <A href="javascript:selectCode(0)">aquí</A> para selecionar o código na janela abaixo.<BR>
+      Use Ctrl+C para copiar para o seu "clipboard".</TD>
+  </TR>
+  <TR>
+	<TD width="100%" align="center">
+		<FORM method="POST" name="F">
+		<TEXTAREA rows="10" cols="61" name="TA" style="background-color: white; color: black; border: 1 solid #6E6650"><!-- inicio Cole este texto no corpo de sua pagina.-->
+<html><br>
+<head><ul>
+	<title>Utilizando Frames.</title></ul>
+</head><br>
+<body><ul>
+<h1 align="center">Esta é a Quinta Página.</h1></ul>
+</body><br>
+</html>
+<!-- Fim -->
+<p align="left">Salve-o como <STRONG>frame_5.html</STRONG></p>
+<hr>
+<p>Finalmente vamos criar a nossa página principal.</p>
+<!-- Inicio da Janela //-->    
+<table border="5" cellpadding="10" cellspacing="0" border color="gray" bgcolor="silver" width="608" align="center">
+<CAPTION ALIGN="" VALIGN="" TITLE="">Frame </CAPTION>
+  <tr>
+    <td width="100%" align="center">Clique <a href="javascript:selectCode(0)">aquí</a> para selecionar o código na janela abaixo.<br>
+      Use Ctrl+C para copiar para o seu "clipboard".</font></td>
+  </tr>
+  <tr>
+	<td width="100%" align="center">
+		<form method="POST" name="F">
+		<textarea rows="10" cols="61" name="TA" style="background-color: white; color: black; border: 1 solid #6E6650">
+<!-- inicio Cole este texto no corpo de sua pagina.-->
+<html><br>
+<head><ul>
+	<title>Utilizando Frames.</title></ul>
+</head><br>
+<body><br>
+
+</body><br>
+</html>
+<!-- Fim -->
+		</TEXTAREA>
+	</FORM>
+	</TD>
+  </TR>
+</TBODY></TABLE>
+<!-- Fim da janela -->
+<P align="left">Salve-o como <STRONG>frame_5.html</STRONG></P>
+<HR>
+<!-- Inicio da Janela //-->    
+<TABLE border="5" cellpadding="10" cellspacing="0" color="gray" bgcolor="silver" width="608" align="center">
+<CAPTION align="" valign="" title="">Frame 6 </CAPTION>
+  <TBODY><TR>
+    <TD width="100%" align="center">Clique <A href="javascript:selectCode(0)">aquí</A> para selecionar o código na janela abaixo.<BR>
+      Use Ctrl+C para copiar para o seu "clipboard".</TD>
+  </TR>
+  <TR>
+	<TD width="100%" align="center">
+		<FORM method="POST" name="F">
+		<TEXTAREA rows="10" cols="61" name="TA" style="background-color: white; color: black; border: 1 solid #6E6650"><!-- inicio Cole este texto no corpo de sua pagina.-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<title>Utilizando Frames</title>
+</head>
+<body>
+	<h2>Esta é a Sexta Página.</h2>
+	<BR>
+	<BR>
+	<P align="center"><A HREF="frame_0.html"  TARGET="area_2">Volta à tela principal</A></P>
+</body>
+</html>
+<!-- Fim -->
+		</TEXTAREA>
+	</FORM>
+	</TD>
+  </TR>
+</TBODY></TABLE>
+<!-- Fim da janela -->
+<P align="left">Salve-o como <STRONG>frame_6.html</STRONG></P>
+<HR>
+<P align="left">Substitua &lt;body&gt; e &lt;/body&gt; por &lt;FRAMESET&gt; e &lt;/FRAMESET&gt; respectivamente.
+Vamos inicialmente definir a nossa tela em três áreas horizontais. A superior  ocupará 20%, a intermediária 70% e a inferior 10%</P>
+<TABLE align="CENTER" width="40%" border="5" bordercolorlight="silver" bordercolordark="gray">
+
+<CAPTION align="CENTER">VAMOS CRIAR NOSSA PáGINA ASSIM.</CAPTION>
+<TBODY><TR>
+       <TD>Página 1</TD>
+</TR>
+<TR>
+       <TD>Pagina 2</TD>
+</TR>
+<TR>
+       <TD>Página 3</TD>
+</TR>
+</TBODY></TABLE>
+  
+<HR>
+<!-- Inicio da Janela //-->    
+<TABLE border="5" cellpadding="10" cellspacing="0" color="gray" bgcolor="silver" width="608" align="center">
+<CAPTION align="" valign="" title="">Dividindo a tela em três áreas. </CAPTION>
+  <TBODY><TR>
+    <TD width="100%" align="center">Clique <A href="javascript:selectCode(0)">aquí</A> para selecionar o código na janela abaixo.<BR>
+      Use Ctrl+C para copiar para o seu "clipboard".</TD>
+  </TR>
+  <TR>
+	<TD width="100%" align="center">
+		<FORM method="POST" name="F">
+		<TEXTAREA rows="10" cols="61" name="TA" style="background-color: white; color: black; border: 1 solid #6E6650"><!-- inicio Cole este texto no corpo de sua pagina.-->
+<html><br>
+<head><ul>
+	<title>Utilizando Frames.</title></ul>
+</head><br>
+<FRAMESET cols="20%",70%,10%"><br>
+</FRAMESET><br>
+</html>
+<!-- Fim -->
+		</TEXTAREA>
+	</FORM>
+	</TD>
+  </TR>
+</TBODY></TABLE>
+<!-- Fim da janela -->
+<P align="left">Salve-o como frame.html mas mantenha no editor para incluirmos o conteúdo.</P>
+<HR>
+<P align="left">Agora vamos criar os Frames, um para cada linha.</P>
+<!-- Inicio da Janela //-->    
+<TABLE border="5" cellpadding="10" cellspacing="0" color="gray" bgcolor="silver" width="608" align="center">
+<CAPTION align="" valign="" title="">Frames</CAPTION>
+  <TBODY><TR>
+    <TD width="100%" align="center">Clique <A href="javascript:selectCode(0)">aquí</A> para selecionar o código na janela abaixo.<BR>
+      Use Ctrl+C para copiar para o seu "clipboard".</TD>
+  </TR>
+  <TR>
+	<TD width="100%" align="center">
+		<FORM method="POST" name="F">
+		<TEXTAREA rows="10" cols="61" name="TA" style="background-color: white; color: black; border: 1 solid #6E6650"><!-- inicio Cole este texto no corpo de sua pagina.-->
+<html><br>
+<head><ul>
+	<title>Utilizando Frames.</title></ul>
+</head><br>
+<FRAMESET> rows="20%",70%,10%"><ul>
+	<FRAME SRC="frame_1.html""><br>
+	<FRAME SRC="frame_2.html""><br>
+	<FRAME SRC="frame_3.html""></ul>
+</FRAMESET><br>
+</html>
+<!-- Fim -->
+		</TEXTAREA>
+	</FORM>
+	</TD>
+  </TR>
+</TBODY></TABLE>
+<!-- Fim da janela -->
+
+<P align="left">Salve como <EM>frame.html</EM>e execute para ver como ficou.</P>
+<P align="left">Muito bem. Mas nós queremos subdividir a segunda linha em duas colunas. Para isto vamos criar um segundo FRAMESET aninhado no primeiro. Ele terá duas colunas que ocuparão 20% e 80% da linha. respectivamente. Nelas carregaremos a página 3 e a pagina 4. </P>
+<HR>
+<!-- Inicio da Janela //-->    
+<TABLE border="5" cellpadding="10" cellspacing="0" color="gray" bgcolor="silver" width="608" align="center">
+<CAPTION align="" valign="" title="">Frame </CAPTION>
+  <TBODY><TR>
+    <TD width="100%" align="center">Clique <A href="javascript:selectCode(0)">aquí</A> para selecionar o código na janela abaixo.<BR>
+      Use Ctrl+C para copiar para o seu "clipboard".</TD>
+  </TR>
+  <TR>
+	<TD width="100%" align="center">
+		<FORM method="POST" name="F">
+		<TEXTAREA rows="10" cols="61" name="TA" style="background-color: white; color: black; border: 1 solid #6E6650"><!-- inicio Cole este texto no corpo de sua pagina.-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<title>Utilizando Frames</title>
+</head>
+	<FRAMESET ROWS="20%,70%,10%" Cols="5%">
+	  <FRAME SRC="frame_1.html" name="area_1">
+	  <FRAMESET Cols="20%,80%">
+		  <FRAME SRC="frame_2a.html" name="area_2">
+	  	  <FRAME SRC="frame_4.html" name="area_4">
+	  </FRAMESET>
+	  <FRAME SRC="frame_3.html"name="area_3" >  
+	</FRAMESET>
+</html>
+<!-- Fim -->
+		</TEXTAREA>
+	</FORM>
+	</TD>
+  </TR>
+</TBODY></TABLE>
+<!-- Fim da janela -->
+<P align="left">Salve-o como <STRONG>frame.html</STRONG> em exercicios</P>
+<P><A href="http://cyrocp.sites.uol.com.br/Facil/frame_0.html">Veja se a sua é igual a esta.</A></P>
+<HR>
+
+<P align="left">Mas nós pretendiamos ter um men&amp;uaccut; na coluna à esquerda da segunda linha. Para isto vamos alterar o arquivo <STRONG>frame_2.html que criamos. Abra-o em seu <STRONG>1st Page</STRONG> e crie o menú acrescentando as linhas necessárias.</STRONG> </P>
+<HR>
+<!-- Inicio da Janela //-->    
+<TABLE border="5" cellpadding="10" cellspacing="0" color="gray" bgcolor="silver" width="608" align="center">
+<CAPTION align="" valign="" title="">Frame_2 </CAPTION>
+  <TBODY><TR>
+    <TD width="100%" align="center">Clique <A href="javascript:selectCode(0)">aquí</A> para selecionar o código na janela abaixo.<BR>
+      Use Ctrl+C para copiar para o seu "clipboard".</TD>
+  </TR>
+  <TR>
+	<TD width="100%" align="center">
+		<FORM method="POST" name="F">
+		<TEXTAREA rows="10" cols="61" name="TA" style="background-color: white; color: black; border: 1 solid #6E6650"><!-- inicio Cole este texto no corpo de sua pagina.-->
+<html>
+<head>
+	<title>Utilizando Frames.</title>
+</head>
+<body>
+<h1 align="center">Esta é a Segunda Página.</h1>
+<!-- Acrescente as linhas abaixo -->
+<h3 align="center">MENU</h3>
+<TABLE align="center">
+	<CAPTION ALIGN="CENTER">Selecione a página desejada.</CAPTION><br>
+	<TR>
+       <TD><A HREF="frame_4.html" TARGET="area_4">Página 4</A></TD>
+	</TR>
+	<TR>
+       <TD><A HREF="frame_5.html" TARGET="area_4">Página 5</A></TD>
+	</TR>
+	<TR>
+       <TD><A HREF="frame_6.html" TARGET="area_4">Página 6</A></TD>
+	</TR>
+	<TR>
+       <TD><A HREF="http://www.geocities.com/cyrocp/" TARGET="area_4">Aprenda Fácil</A></TD>
+	</TR>	
+	<TR>
+       <TD><A HREF="frame_2b.html" TARGET="area_4">Menú I</A></TD>
+	</TR>
+</TABLE>
+<!-- Até aquí -->
+</body>
+</html>
+
+<!-- Fim -->
+		</TEXTAREA>
+	</FORM>
+	</TD>
+  </TR>
+</TBODY></TABLE>
+<!-- Fim da janela -->
+<P>O arquivo solicitado será sempre aberto na coluna à esquerda da segunda linha.</P>
+<P align="left">Além de páginas em seu site também podemos abrir páginas em outros locais, em nosso exemplo estamos abrindo Aprenda Fácil. </P>
+<P align="left">Salve-o com : <STRONG>frame_2.html</STRONG></P>
+<P align="left">Finalmente vamos criar o segundo Menú que chamará as páginas 4,5 e 6.</P>
+<!-- Inicio da Janela //-->    
+<TABLE border="5" cellpadding="10" cellspacing="0" color="gray" bgcolor="silver" width="608" align="center">
+<CAPTION align="" valign="" title="">Frame 2b </CAPTION>
+  <TBODY><TR>
+    <TD width="100%" align="center">Clique <A href="javascript:selectCode(0)">aquí</A> para selecionar o código na janela abaixo.<BR>
+      Use Ctrl+C para copiar para o seu "clipboard".</TD>
+  </TR>
+  <TR>
+	<TD width="100%" align="center">
+		<FORM method="POST" name="F">
+		<TEXTAREA rows="10" cols="61" name="TA" style="background-color: white; color: black; border: 1 solid #6E6650"><!-- inicio Cole este texto no corpo de sua pagina.-->
+<h2 align="center">MENÚ - II</h2>
+<TABLE align="center">
+<TR>
+	   <TD>TARGET="_top"<TD>
+</TR>
+<TR>   
+       <TD><A HREF="frame_4.html" TARGET="_top">Página 4 </A></TD>   
+</TR>
+<TR>
+	   <TD>TARGET="_blank"<TD>
+</TR>
+<TR>   
+       <TD><A HREF="frame_5.html" TARGET="_blank">Página 5</A></TD>
+</TR>
+<TR>
+	   <TD>TARGET="_top"<TD>
+</TR>
+<TR>	   
+       <TD><A HREF="frame_6.html" TARGET="_top">Página 6</A></TD>
+</TR>
+<TR>
+	   <TD>TARGET="_self"<TD>
+</TR>
+<TR>
+       <TD><A HREF="frame_2a.html" TARGET="_self">Menú I</A></TD>
+</TR>
+</TABLE>gt;
+<!-- Fim -->
+		</TEXTAREA>
+	</FORM>
+	</TD>
+  </TR>
+</TBODY></TABLE>
+<!-- Fim da janela -->
+<P align="left">Salve-o com : <STRONG>frame_2b.html</STRONG></P>
+<P>Execute <EM>frame.html</EM> e veja como ficou. Teste as várias opções.<A href="http://cyrocp.sites.uol.com.br/Facil/frame_0.html">Se quiser execute esta.</A></P>
+<P align="left">&amp;NBSP;</P>
+<P>Agora vamos aprender um endereçamento relativo.</P>
+<P>Estas são as quatro palavras mágicas.</P>
+<DL>
+	<DT>target="_top"</DT><DD>Faz com que o documento seja aberto ocupando toda a janela do navegador, ocultando portanto os frames.
+	</DD><DT>target="_blank"</DT><DD>Faz com que o documento seja aberto uma nova janela.
+	</DD><DT>_self</DT><DD>Faz com que o documento seja aberto na mesma janela ou frame.
+	</DD><DT>_parent</DT><DD>Faz com que o documento seja aberto no frameset seguinte.
+</DD></DL>
+<P align="left">&amp;NBSP;</P>
+<HR>
+<!-- Inicio da Janela //-->    
+<TABLE border="5" cellpadding="10" cellspacing="0" color="gray" bgcolor="silver" width="608" align="center">
+<CAPTION align="" valign="" title="">Frame 2 </CAPTION>
+  <TBODY><TR>
+    <TD width="100%" align="center">Clique <A href="javascript:selectCode(0)">aquí</A> para selecionar o código na janela abaixo.<BR>
+      Use Ctrl+C para copiar para o seu "clipboard".</TD>
+  </TR>
+  <TR>
+	<TD width="100%" align="center">
+		<FORM method="POST" name="F">
+		<TEXTAREA rows="10" cols="61" name="TA" style="background-color: white; color: black; border: 1 solid #6E6650"><!-- inicio Cole este texto no corpo de sua pagina.-->
+<html>
+<head>
+	<title>Utilizando Frames.</title>
+</head>
+<body>
+<h1 align="center">Esta é a Segunda Página.</h1>
+<FONT COLOR="#009933">
+<h3 align="center">MENU</h3>
+<TABLE align="center">
+	<CAPTION ALIGN="CENTER">Selecione a página desejada.</CAPTION><br>
+	<TR>
+       <TD><A HREF="frame_4.html" TARGET="_top">Página 4</A></TD>
+	</TR>
+	<TR>
+       <TD><A HREF="frame_5.html" TARGET="_balnk">Página 5</A></TD>
+	</TR>
+	<TR>
+       <TD><A HREF="frame_6.html" TARGET="_parent">Página 6</A></TD>
+	</TR>
+	<TR>
+       <TD><A HREF="frame_2.html" TARGET="_self">Menú I</A></TD>
+	</TR>
+</TABLE>
+</FONT>
+</body>
+</html>
+<!-- Fim -->
+		</TEXTAREA>
+	</FORM>
+	</TD>
+  </TR>
+</TBODY></TABLE>
+<!-- Fim da janela -->
+<P align="left">Salve-o com : <STRONG>frame_2b.html</STRONG></P>
+<H2>&lt;NOFRAME&gt; &lt;/NOFRAME&gt; </H2>
+<P align="left">Este par de comandos permite que você inclua um código alternativo que será utilizado caso o navegador de seu visitante não aceite <EM>FRAME</EM>. Tanto pode ser um conjunto de páginas que não utilizemeste  recurso como uma observação  de que para entrar no site é preciso que o visitante faça o <EM>UPGRADE</EM> de seu navegador para uma versão que permita o uso de Frames.    </P>
+<H2>Vantagens e Desvantagens.</H2>
+<P align="left">O uso de Frames apresenta as seguintes vantages:</P>
+<UL>
+<LI>Torna o download das páginas mais rápido.</LI>
+	<UL> Em nosso exemplo Cabeçalho, Menú e Rodpé permanecem fixos. Se contiverem peças gráficas elas não mais terãode ser carregadas o que acelera a apresentação da página.</UL>
+<LI>Permite uma racionalização da criação e manutenção do site.</LI>
+	<UL>Qualquer alteração no Cabeçalho, no Menu ou no Rodapé é feita apenas uma vez, tornando a operação mais rápida e segura, pois evita erros e esquecimento.</UL>
+<LI>Torna o código fonteinacessivel.</LI>
+	<UL>com o uso de Frames, os navegadores não podem exibir o código fonte de suas páginas. Elas ficam assim protegidas da bisbilhotice alheia. Ninguém vai "roubar o seu trabalho" copiando-o.</UL>
+</UL>
+<P align="left">Como tudo neste mundo, também tem suas desvantagens:</P>
+<UL>
+<LI>Nem todos os navegadores aceitam <EM>FRAME.</EM></LI>
+	<UL>Muito embora isto se torne cadavez menos frequente, ainda há muita gente com navegadores antigos que estariam incapacitados de navegar em seusite.</UL>
+	<UL>Muito embora isto possa ser resolvido duplicando o site semo uso de Frame como comando NOFRAME, isto vem anular a maioria das vantagens acima.</UL>
+<LI>Finalmente os <STRONG>SPIDERS</STRONG>, robôs aranha das <STRONG>Maquinas de Busca</STRONG> nãp entram em  Frames.</LI>
+<UL>Esta é a maior desvantagem pois vai priva-lo de um dos mais eficientes meios de receber <EM>TRÁFEGO</EM> em seu site. Afinal um site dificíl  de ser localizado, com raras exceções, perde muito a sua utilidade.</UL>
+</UL>
+<H2>Sumário</H2>
+<P align="left">Aprendemos a criar e manter paginas com frames.</P>
+<P align="left">Analisamos as principais vantagens e desvantagens de seu uso.</P>
+<P align="left">Em nossa próxima lição veremos <STRONG>O QUE SÂO</STRONG> e como <STRONG>CRIAR</STRONG> e <STRONG>MANTER GALERIAS</STRONG>. </P>
+<HR size="5" noshade="" width="75%" color="#0000FF">
+<DIV align="center"><CENTER>
+<FORM>
+            <P><INPUT type="button" value="  &lt;- Voltar " onclick="window.location.href=&#39;Licao_13.html&#39;">
+			<INPUT type="button" value="Home" onclick="window.location.href=&#39;index.html&#39;">
+			<INPUT type="button" value="Pr&oacute;xima -&gt;" onclick="window.location.href=&#39;Licao_15.html&#39;"></P>
+        </FORM>
+</CENTER></DIV><HR size="5" noshade="" width="75%" color="#0000FF">
+
+
+
+
+</BODY></HTML>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folhas de Estilo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> Como funciona a memória RAM </h1>
+<h3>por Dave Coustan e Jeff Tyson - traduzido por HowStuffWorks Brasil</h3>
+
+<div class=sec2>
+<h2>Neste artigo</h2>
+1. Introdução<br>
+2. RAM dinâmica<br>
+3. RAM estática<br>
+4. Tipos de memória RAM<br>
+5. Módulos de memória<br>
+6. Quanto você precisa?<br>
+7. Como instalar a memória RAM<br>
+8. Mais informações<br>
+9. Veja todos os artigos sobreHardware<br>
+</div>
+
+<div class=sec3>
+<h1>Introdução</h1>
+A <strong>memória RAM</strong> (Random Access Memory) é a forma mais conhecida dememória de computador. A memória RAM é considerada de "acesso aleatório" porque é possível acessar diretamente qualquer célula da memória se você conhece a linha e a coluna que cruzam essa célula.
+ 
+<p class=citacao> O oposto da memória RAM é a memória de <strong>acesso serial (SAM)</strong>. A memória SAM armazena dados  como uma série de células de memória que podem somente ser acessadas seqüencialmente (<em>como  uma fita cassete</em>). Se o dado não está na localização atual, cada célula da memória é  verificada até que os dados necessários sejam encontrados. A memória SAM funciona muito bem  para buffers de memória, onde os dados são normalmente armazenados na ordem em que serão usados (<em>um bom exemplo é a memória buffer de textura em uma placa de vídeo</em>). Os dados RAM, por outro lado, podem ser acessados em qualquer ordem.
+Neste artigo, você vai aprender tudo sobre o que é a memória RAM, que tipo deve comprar e como instalá-la.
+</p>
+</div>
+
+<div class=sec31>
+<h1>RAM dinâmica</h1>
+Semelhante a um microprocessador, um chip de memória é um <strong>circuito integrado (CI)</strong>, feito de milhões de transitores e capacitores. Na forma mais comum de memória de computador, a <strong>memória de acesso aleatório dinâmico (DRAM)</strong>, um transistor e um capacitor são unidos para criar uma <strong>célula de memória</strong>, que representa um único bit de dados. O capacitor mantém o bit de informação: um 0 ou um 1 (<em>veja Como funcionam os bits e os bytes para mais informações sobre bits</em>). O transistor age como uma chave que permite ao circuito de controle no chip de memória ler o capacitor ou mudar seu estado.
+Um capacitor é como um pequeno balde capaz de armazenar elétrons. Para armazenar um 1 na célula de memória, o balde é preenchido com elétrons. Para armazenar um 0, ele é esvaziado. O problema com o balde do capacitor é que ele tem um vazamento. Em questão de poucos milésimos de segundos, um balde cheio fica vazio. Portanto, para a memória dinâmica funcionar, a CPU ou o <strong>controlador de memória</strong> tem de carregar todos os capacitores mantendo um 1 antes que eles descarreguem. Para isto, o controlador de memória lê a memória e então grava nela de volta. Esta operação de atualização (mais conhecida como <strong>refrescamento</strong>) acontece automaticamente, milhares de vezes por segundo.
+<img src="Downloads/Aula DesW 230322/imagem 1.bmp">
+O capacitor em uma célula de memória DRAM é como um balde furado.
+Ele precisa ser refrescado periodicamente ou descarregará para 0
+O nome DRAM vem desta <strong>operação de refrescamento</strong>. A memória DRAM tem de ser refrescada de forma dinâmica, constantemente, ou perde o que está guardando. O aspecto negativo de todo esse refrescamento é que leva tempo e deixa a memória lenta.
+As células de memória são gravadas em uma pastilha de silício em uma série de colunas (<strong>bitlines</strong>) e linhas (<strong>wordlines</strong>). O cruzamento de um bitline e um wordline constitui o <strong>endereço</strong> da célula de memória.
+<img src="Downloads/Aula DesW 230322/imagem 2.bmp">
+Nesta figura, as células vermelhas representam os 1s e as células brancas representam os 0s. 
+Uma coluna é selecionada e então as linhas são carregadas para gravar os dados na coluna específica.
+A memória DRAM funciona enviando uma carga através da coluna apropriada (CAS) para ativar o transistor de cada bit na coluna. Ao gravar, as linhas contêm o estado que o capacitor deve assumir. Ao ler, um amplificador de sinal, determina o nível de carga no capacitor. Se for maior que 50%, ele o lê como um 1, caso contrário, ele o lê como um 0. Um contador guarda a seqüência de refrescamento baseado na ordem na qual as linhas foram acessadas. A duração de tempo necessária para fazer tudo isso é tão curta que é expressada em <strong>nanosegundos</strong> (<em>bilionésimos de um segundo</em>). Um chip de memória de 70 ns leva 70 nanosegundos para ler e recarregar completamente cada célula.
+As células de memória sozinhas seriam inúteis se não houvesse alguma maneira de obter e inserir informações nelas. As células de memória têm uma estrutura inteira de apoio composto por outros circuitos especializados. Esses circuitos realizam funções como:
+<ul>
+<li>	identificar cada linha e coluna (<strong>selecionar o endereço da linha e selecionar o endereço da coluna</strong>);
+<li>	manter atualizada a seqüência de refrescamento (<strong>contador</strong>);
+<li>	ler e rearmazenar o sinal de uma célula (<strong>amplificador de sinal</strong>);
+<li>	dizer a uma célula se deve levar uma carga ou não (<strong>habilitador de gravação</strong>);
+</ul>
+Outras funções do controlador de memória abrangem uma série de tarefas como identificação do tipo, velocidade e quantidade de memória e a verificação de erros.
+</div>
+
+<div class=sec32>
+<h1>RAM estática</h1>
+A <strong>RAM estática</strong> usa uma tecnologia totalmente diferente. Na RAM estática, uma forma de flip-flop contém cada bit de memória (<em>veja Como funciona a lógica booleana para mais detalhes sobre flip-flops</em>). Um flip-flop para uma célula de memória utiliza 4 ou 6 transistores mais alguns fios, mas nunca tem de ser refrescado. Isto torna a RAM estática significativamente mais rápida que a RAM dinâmica. Entretanto, como ela tem mais componentes, ocupa também muito mais espaço em um chip que uma célula de memória dinâmica. Portanto, você pode ter menos memória por chip, o que torna a RAM estática muito mais cara.
+A RAM estática é rápida e cara, enquanto a DRAM é mais barata e mais lenta. A RAM estática é usada para se criar cache de velocidade compatível com a CPU, enquanto a DRAM se constitui no 
+<b>grande sistema de memória RAM</b>.
+
+Originalmente, os chips de memória nos computadores de mesa (desktops) usavam uma configuração de pinos chamada de <strong>encapsulamento em linha dupla (DIP - Dual Inline Packcage)</strong>. Esta configuração de pinos podia ser soldada em orifícios na placa-mãe do computador ou encaixada a um soquete soldado à placa-mãe. Este método funcionou muito bem enquanto os computadores operavam com alguns megabytes ou menos de memória RAM. Mas como a necessidade de memória cresceu, o número de chips buscando espaço na placa-mãe aumentou.
+A solução foi colocar os chips de memória, assim como todos os componentes de apoio, em uma <strong>placa de circuito impresso</strong> (PCB - Printed Circuit Board) separada, que pudesse ser encaixada a um conector especial (<strong>banco de memória</strong>) na placa-mãe. A maioria desses chips usa uma configuração de pinos do tipo SOJ (Small Outline J-lead), mas alguns poucos fabricantes também usam a configuração de TSOP (Thin Small Outline Package). A diferença-chave entre estes tipos de pinos mais recentes e a configuração DIP original é que os chips SOJ e TSOP são montados na superfície da PCB. Em outras palavras, os pinos são soldados diretamente na superfície da placa e não inseridos nos orifícios ou soquetes.
+Em geral, os chips de memória estão disponíveis apenas como parte de uma placa chamada módulo. Você provavelmente já viu uma memória descrita como 8x32 ou 4x16. Estes números representam o número de chips multiplicado pela capacidade individual de cada chip, medida em megabits(Mb), ou um milhão de bits. Pegue o resultado e divida-o por 8 para chegar ao número de megabytes nesse módulo. Por exemplo, 4x32 significa que o módulo tem 4 chips de 32 megabits. Multiplique 4 por 32 e obterá 128 megabits. Já que sabemos que um byte tem 8 bits, precisamos dividir nosso resultado de 128 por 8. Nosso resultado é 16 megabytes.
+<a href="#">Na próxima seção, vamos dar uma olhada em outros tipos comuns de memória RAM.</a><br>
+<br>
+</div>
+
+<div class=abs><img src="Downloads/Aula DesW 230322/Memória RAM.bmp"></div>
+</body>
+</html>

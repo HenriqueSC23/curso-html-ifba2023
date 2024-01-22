@@ -1,0 +1,54 @@
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24pt;
+}
+
+
+
+h1, h2, h3{
+    color: red;
+}
+
+h2{
+    font-size: 18pt;
+}
+
+h3{
+    font-size: 14pt;
+}
+
+em{
+    color: cyan;
+}
+
+body{
+    font-size: 10pt;
+    background-color: rgb(32, 109, 83);
+    color: white;   
+    text-indent: 1cm;
+}
+
+.sec31{
+    background-color: yellowgreen;
+}
+
+.sec32{
+    background-color: brown;
+}
+
+.sec2{
+    background-color: rgb(30, 159, 210);
+}
+
+.sec3{
+    background-color: darkgreen;
+}
+
+.sec31, .sec32{
+    margin-right: 0,3cm;
+    margin-left: 0,3cm;
+    margin-top: 0,5cm;
+    margin-bottom: 0,5cm;
+}
+
+
